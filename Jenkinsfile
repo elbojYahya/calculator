@@ -47,7 +47,7 @@ steps {
 sh "docker build -t elboj/calculator ."
 }
 }
-stage("Docker login") { steps { sh "docker login --username elbojYahya --password yahyar13boj"  } }
+stage("Docker login") { steps { sh "docker login --username elboj --password yahyar13boj"  } }
 stage("Docker push") {
 steps {
 sh "docker push elboj/calculator"
