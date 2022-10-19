@@ -47,5 +47,10 @@ steps {
 sh "docker build -t elboj/calculator ."
 }
 }
+stage("Docker push") {
+steps {
+sh "docker push elboj/calculator"
+}
+}
 }
 }
