@@ -62,7 +62,7 @@ sh "docker push elboj/calculator"
 }
 
 stage("Deploy to staging") { 
-steps{ sh "docker run -d --rm -p 8090:8080 --name calculator elboj/calculator" }
+steps{ sh "docker run -d --rm -p 8090:8090 --name calculator elboj/calculator" }
 }
 
 stage("Acceptance test") {
