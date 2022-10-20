@@ -67,7 +67,7 @@ steps{ sh "docker run -d --rm -p 8090:8080 --name calculator elboj/calculator" }
 
 stage("Acceptance test") {
 steps { sleep 30
-	sh "chmod +x acceptance_test.sh && ./calculator_test.sh" }
+	sh "chmod +x calculator_test.sh && ./calculator_test.sh" }
 }
 }
 post { always { sh "docker stop calculator" } }
